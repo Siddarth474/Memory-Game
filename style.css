@@ -1,0 +1,96 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+body{
+    height : 100vh;
+    width : 100%;
+    display: flex;
+    background-color: #1995AD;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.game-container {
+    background-color:#A1D6E2;
+    width:400px;
+    padding : 15px 20px;
+    margin : auto;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.box-container{
+    width:100%;
+    margin-top: 0px;
+    padding:5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5px;
+    perspective: 1000px;
+}
+
+.card-container{
+    background-color: #1995AD;
+    height:70px;
+    width :70px;
+    font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform.5s;
+}
+
+.card-container.flip{
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}
+
+#reset-btn{
+    margin-top: 20px;
+    padding:8px;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #F1F1F2;
+    cursor: pointer;
+}
+#result-container h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom:10px;
+}
+#result-container p{
+    font-size: 1rem;
+}
+.hide-cards {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.hidden{
+    display: none;
+}
